@@ -1,10 +1,10 @@
 # docker-airflow for python3
-[![CircleCI branch](https://img.shields.io/circleci/project/puckel/docker-airflow/master.svg?maxAge=2592000)](https://circleci.com/gh/puckel/docker-airflow/tree/master)
-[![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://hub.docker.com/r/puckel/docker-airflow/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/puckel/docker-airflow.svg?maxAge=2592000)]()
-[![Docker Stars](https://img.shields.io/docker/stars/puckel/docker-airflow.svg?maxAge=2592000)]()
+[![CircleCI branch](https://img.shields.io/circleci/project/harmy/docker-airflow/master.svg?maxAge=2592000)](https://circleci.com/gh/harmy/docker-airflow/tree/master)
+[![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://hub.docker.com/r/harmy/docker-airflow/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/harmy/docker-airflow.svg?maxAge=2592000)]()
+[![Docker Stars](https://img.shields.io/docker/stars/harmy/docker-airflow.svg?maxAge=2592000)]()
 
-This repository contains **Dockerfile** of [airflow](https://github.com/apache/incubator-airflow) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/puckel/docker-airflow/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains **Dockerfile** of [airflow](https://github.com/apache/incubator-airflow) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/harmy/docker-airflow/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
 ## Informations
 
@@ -17,19 +17,19 @@ This repository contains **Dockerfile** of [airflow](https://github.com/apache/i
 
 Pull the image from the Docker repository.
 
-        docker pull puckel/docker-airflow
+        docker pull harmy/docker-airflow
 
 ## Build
 
 For example, if you need to install [Extra Packages](http://pythonhosted.org/airflow/installation.html#extra-package), edit the Dockerfile and than build-it.
 
-        docker build --rm -t puckel/docker-airflow .
+        docker build --rm -t harmy/docker-airflow .
 
 ## Usage
 
 By default, docker-airflow run Airflow with **SequentialExecutor** :
 
-        docker run -d -p 8080:8080 puckel/docker-airflow
+        docker run -d -p 8080:8080 harmy/docker-airflow
 
 If you want to run other executor, you've to use the docker-compose.yml files provided in this repository.
 
@@ -45,7 +45,7 @@ NB : If you don't want to have DAGs example loaded (default=True), you've to set
 
 `LOAD_EX=n`
 
-        docker run -d -p 8080:8080 -e LOAD_EX=n puckel/docker-airflow
+        docker run -d -p 8080:8080 -e LOAD_EX=n harmy/docker-airflow
 
 If you want to use Ad hoc query, make sure you've configured connections:
 Go to Admin -> Connections and Edit "mysql_default" set this values (equivalent to values in airflow.cfg/docker-compose.yml) :
