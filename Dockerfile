@@ -1,4 +1,4 @@
-# VERSION 1.7.1.3-3
+# VERSION 1.7.1.3-4
 # AUTHOR: harmy
 # DESCRIPTION: Basic Airflow container
 # BUILD: docker build --rm -t harmy/docker-airflow
@@ -34,6 +34,7 @@ RUN set -ex \
         liblapack-dev \
         gfortran \
         libpq-dev \
+        libmysqlclient-dev \
     ' \
     && echo "deb http://http.debian.net/debian jessie-backports main" >/etc/apt/sources.list.d/backports.list \
     && apt-get update -yqq \
